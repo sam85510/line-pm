@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>LINE 追專案安裝包</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&display=swap">
+<style>
+:root{--y:#FFD60A;--k:#000;--bg:#1d1d1b;--c:#2B2B28;--w:#f4f2ea;--or:#D97757}
+*{box-sizing:border-box;min-width:0}body{overflow-x:hidden}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--w);font-family:"Noto Serif TC","Songti TC","PingFang TC",serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+.ui{position:fixed;inset:0;z-index:-1;opacity:.35;filter:blur(2px);background:
+linear-gradient(90deg,#2a2a27 0 120px,transparent 120px),
+repeating-linear-gradient(180deg,transparent 0 30px,#3a3a36 30px 38px,transparent 38px 64px);background-size:100% 100%,100% 64px}
+.ui:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,transparent 0,var(--bg) 75%)}
+.hl{display:inline;background:var(--y);color:var(--k);font-weight:900;padding:.08em .28em;line-height:1.55;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.y{color:var(--y);font-weight:700}
+.sans{font-family:-apple-system,"PingFang TC",sans-serif}
+.box{background:rgba(20,20,18,.85);border:1px solid #3d3d39;border-radius:12px;padding:14px 16px;font-weight:700}
+.win{background:#f7f6f2;color:#1d1d1b;border-radius:14px;padding:12px 14px 14px;font-family:-apple-system,"PingFang TC",sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.win .t{font-size:12px;color:#8a8880;margin-bottom:6px}
+.win pre{white-space:pre-wrap;word-break:break-word;overflow-wrap:anywhere;font:13px/1.75 ui-monospace,Menlo,monospace;margin:0;max-height:260px;overflow:auto;color:#2b2b28}
+.send{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:10px;border-top:1px solid #e3e1d9;padding-top:10px}
+.send span{font-size:14px;color:#6b6a65}
+.cp{font:inherit;font-weight:800;font-size:15px;border:none;border-radius:10px;padding:10px 16px;background:var(--or);color:#fff;cursor:pointer;transition:transform .1s,background .2s}
+.cp:active{transform:scale(.96)}.cp.ok{background:#3b8b4b}
+.stk{width:150px;height:auto;filter:drop-shadow(0 6px 10px rgba(0,0,0,.4))}
+.foot{display:flex;align-items:center;gap:8px;font:600 14px -apple-system,"PingFang TC",sans-serif;color:#d8d6ce}
+.foot img{height:18px}.foot .n{margin-left:auto}
+.bar{height:3px;background:#4a4a45;border-radius:2px;margin-top:8px;overflow:hidden}.bar i{display:block;height:100%;background:var(--y);transition:width .3s}
+.fade{opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease}.fade.on{opacity:1;transform:none}
+</style><style>body{display:flex;flex-direction:column;min-height:100vh;justify-content:center}
+.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding:20px calc(50% - 200px);scrollbar-width:none}.track::-webkit-scrollbar{display:none}
+.sl{flex:0 0 400px;max-width:88vw;scroll-snap-align:center;background:rgba(29,29,27,.85);border:1px solid #33332f;border-radius:6px;padding:24px 20px 16px;min-height:600px;display:flex;flex-direction:column;transition:transform .3s,opacity .3s}
+.sl .in{flex:1}.sl .stk{align-self:flex-end;margin:-10px 0 8px;width:130px}.sl .win pre{max-height:150px}
+.hint{text-align:center;font:600 14px -apple-system,"PingFang TC",sans-serif;color:#a8a69e;padding-bottom:16px}
+@media(max-width:460px){.track{padding:20px 6vw}}</style><style>
+:root{color-scheme:dark}
+html,body{height:100%}body{min-height:100%}
+.track{padding-left:max(calc(50% - 200px),env(safe-area-inset-left,0px));padding-right:max(calc(50% - 200px),env(safe-area-inset-right,0px))}
+@media(max-width:460px){.track{padding-left:max(6vw,16px);padding-right:max(6vw,16px)}}
+.box small{display:block;font-weight:500;font-size:13.5px;color:#b9b7ae;margin-top:2px}
+.sl .stk{width:112px;margin:0 0 8px}
+.sl .win pre{max-height:210px}
+.hint button{font:inherit;color:inherit;background:none;border:1px solid #4a4a45;border-radius:999px;padding:4px 14px;margin:0 8px;cursor:pointer}
+.hint button:focus-visible,.cp:focus-visible{outline:2px solid var(--y);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body><div class="ui"></div><div class="track" id="tr"><section class="sl"><div class="in"><h1 style="font-size:40px;line-height:1.35;margin:0 0 18px">讓 AI 用 LINE<br><span class="hl">幫你追專案。</span></h1><p style="font-size:19px;font-weight:700">複製一段話給 Claude Code，<br>它每小時<span class="y">自己看群組</span>。</p></div><img class="stk" src="s01.png" alt=""><div class="foot"><img src="logo-w.svg" alt=""> @sam.reels.tw<span class="n">1/7</span></div><div class="bar"><i style="width:14%"></i></div></section><section class="sl"><div class="in"><h2 style="font-size:30px;margin:0 0 14px"><span class="hl">它做什麼？</span></h2><div class="box sans" style="font-size:16px;margin-bottom:8px">約好的時間<span class="y">自動記</span>成行程表。<br><small>拍攝、開會、交件、付款日</small></div><div class="box sans" style="font-size:16px;margin-bottom:8px">每個客戶一列進度。<br><small>現在<span class="y">誰在等誰</span>、下一步誰要做</small></div><div class="box sans" style="font-size:16px;margin-bottom:8px">客戶等太久，在內部群組<br><span class="y">tag 該回的人</span>。</div></div><img class="stk" src="s03.png" alt=""><div class="foot"><img src="logo-w.svg" alt=""> @sam.reels.tw<span class="n">2/7</span></div><div class="bar"><i style="width:29%"></i></div></section><section class="sl"><div class="in"><h2 style="font-size:30px;margin:0 0 14px"><span class="hl">你需要：</span></h2><div class="box sans" style="font-size:16px;margin-bottom:8px">Claude 桌面版＋<span class="y">付費方案</span><br><small>Pro 就可以，用 Code 分頁開排程</small></div><div class="box sans" style="font-size:16px;margin-bottom:8px">Chrome＋<span class="y">Claude in Chrome</span> 擴充功能</div><div class="box sans" style="font-size:16px;margin-bottom:8px"><span class="y">LINE 官方帳號</span>（免費方案就行）<br><small>拉進客戶群組和內部群組</small></div></div><img class="stk" src="s04.png" alt=""><div class="foot"><img src="logo-w.svg" alt=""> @sam.reels.tw<span class="n">3/7</span></div><div class="bar"><i style="width:43%"></i></div></section><section class="sl"><div class="in"><h2 style="font-size:30px;margin:0 0 14px"><span class="hl">怎麼裝？</span></h2><p style="font-size:17px;font-weight:700;margin:0 0 12px">四步，約 <span class="y">15 分鐘</span>。</p><div class="box sans" style="font-size:15px;margin-bottom:8px"><span class="y">1</span>　下一張按「複製提示詞」</div><div class="box sans" style="font-size:15px;margin-bottom:8px"><span class="y">2</span>　貼到 Claude 桌面版的 Code 分頁</div><div class="box sans" style="font-size:15px;margin-bottom:8px"><span class="y">3</span>　它一次問你 6 題，照實回答</div><div class="box sans" style="font-size:15px;margin-bottom:8px"><span class="y">4</span>　它讀一個群組給你看，你說對了就建好</div></div><img class="stk" src="s05.png" alt=""><div class="foot"><img src="logo-w.svg" alt=""> @sam.reels.tw<span class="n">4/7</span></div><div class="bar"><i style="width:57%"></i></div></section><section class="sl"><div class="in"><h2 style="font-size:30px;margin:0 0 14px"><span class="hl">提示詞</span></h2><p style="font-size:17px;font-weight:700;margin:0 0 12px">按<span class="y">複製</span>，整段貼給 Claude Code。</p><div class="win"><div class="t">Claude Code</div><pre id="txt">請幫我做一個「LINE 追專案」排程，資料放在 ~/LINE追專案/。全程繁體中文。
+
+一、先問我這幾件事（一次問完，我回答後再做）：
+1. 我的 LINE 官方帳號後台聊天網址（Chrome 打開 chat.line.biz 點進帳號後，網址列那串）。
+2. 要追哪些客戶群組（群組名稱裡的關鍵字，一個專案一個）。
+3. 誰是「我們」：我方同事在 LINE 顯示的名字。其他人都算客戶。
+4. 內部群組叫什麼（提醒要發在這裡）。
+5. 客戶等多久沒人回要提醒（建議 4、8、24 小時各提醒一次）、幾點到幾點不要發、週末發不發。
+6. 要不要開「客戶問常見問題，AI 先回」：要的話給我常見問題和標準回答；不給就不開。
+
+二、在 Chrome 先測一次讀得到：
+- 用 Claude in Chrome 打開我的後台網址。看到登入頁就停下來叫我自己登入，不要輸入任何帳密。
+- 聊天清單是 .chatlist .list-group-item；點進群組後訊息在 .chatroom，日期 .chatsys-date，每則 .chat，寄件人 .chat-header span（連續訊息沒標題就沿用上一則），文字 .chat-item-text。class 帶 chat-primary 的綠色泡泡是官方帳號自己發的。
+- 選一個群組，把最後 5 則讀給我看，我說對了再往下。
+
+三、寫 ~/LINE追專案/掃描程序.md，把我的答案和下面規則寫進去：
+1. 讀每個追蹤群組最近的訊息。
+2. 判斷：客戶最後一則（「好／OK／謝謝」、貼圖這種收尾話不算）之後我方沒回、超過 20 分鐘＝「客戶在等我們」；我方最後講話＝「等客戶」；講完了＝「沒事」。等待時間從客戶第一則沒人回的訊息起算。
+3. 訊息裡有約定的日期時間（拍攝、開會、交件、付款、截止日、改期），寫進 ~/LINE追專案/行程.md：日期｜專案｜什麼事｜誰說的｜原文一句。同一件事改期就改那一行，舊時間寫在後面。
+4. 更新 ~/LINE追專案/進度表.md：一個專案一列，寫 現在誰在等誰、最後一則誰說了什麼、下一步誰要做什麼、最近的約定日期。
+5. 客戶等超過我設的時間、而且這個時間點還沒提醒過：在內部群組發一則，一件事一段，標上該回的人。標人：先找客戶或同事點名的人，沒有就標我方最後在那個群組講話的人，都沒有寫「請認領」。標法：輸入框打半形空白＋@，選單跳出來再點那個人（這樣對方才會收到通知）。換行用 Shift+Enter，Enter 是送出。
+6. 同事答應要做的事（「我明天處理」「我再傳」），隔天還沒做，也照第 5 點提醒。
+7. 只准發到內部群組。「AI 先回」我有開才可以在客戶群組回，而且只回常見問題清單裡有的、照標準回答；清單沒有的不回，改成提醒我方。
+8. 我設的不發時段、週末設定一律照做；到時段了再補發。
+9. 提醒過哪些、什麼時候，記在 ~/LINE追專案/提醒紀錄.json，不重複發。
+10. 後台變成登入頁就停，跟我說「LINE 後台要重新登入」，不要輸入任何密碼。
+
+四、建排程：每小時整點跑一次，內容是「照 ~/LINE追專案/掃描程序.md 做一輪，最後用一句話回報：掃了幾個群組、記了幾個新行程、有沒有發提醒」。
+
+五、做好立刻手動跑一輪，把進度表和行程給我看，並提醒我：電腦和 Claude 桌面版要開著，排程才會跑。之後我說「把 XX 群組加進去」「XX 是同事」「改成晚上 10 點後不發」，就幫我改掃描程序.md。</pre><div class="send"><span>用電腦開這頁最順</span><button class="cp" type="button">複製提示詞</button></div></div></div><img class="stk" src="s06.png" alt=""><div class="foot"><img src="logo-w.svg" alt=""> @sam.reels.tw<span class="n">5/7</span></div><div class="bar"><i style="width:71%"></i></div></section><section class="sl"><div class="in"><h2 style="font-size:30px;margin:0 0 14px"><span class="hl">要注意：</span></h2><div class="box sans" style="font-size:15px;margin-bottom:8px"><span class="y">電腦要開著</span>才會跑。<br><small>Claude 桌面版也要開著</small></div><div class="box sans" style="font-size:15px;margin-bottom:8px">預設<span class="y">不會回客戶</span>，只發內部群組。<br><small>要它先回，第 6 題給它常見問題</small></div><div class="box sans" style="font-size:15px;margin-bottom:8px">它<span class="y">不幫你登入</span>、不打密碼。</div></div><img class="stk" src="s08.png" alt=""><div class="foot"><img src="logo-w.svg" alt=""> @sam.reels.tw<span class="n">6/7</span></div><div class="bar"><i style="width:86%"></i></div></section><section class="sl"><div class="in"><h2 style="font-size:30px;margin:0 0 14px"><span class="hl">裝好之後</span></h2><p style="font-size:17px;font-weight:700;margin:0 0 12px">直接跟它講話改設定：</p><div class="box sans" style="font-size:15px;margin-bottom:8px">「把 XX 群組<span class="y">加進去</span>」</div><div class="box sans" style="font-size:15px;margin-bottom:8px">「XX <span class="y">是同事</span>」</div><div class="box sans" style="font-size:15px;margin-bottom:8px">「晚上 10 點後<span class="y">不要發</span>」</div><p class="sans" style="font-size:15px;font-weight:600;color:#d8d6ce;margin:14px 0 0">裝好跟我說用起來怎樣 👇</p></div><img class="stk" src="s09.png" alt=""><div class="foot"><img src="logo-w.svg" alt=""> @sam.reels.tw<span class="n">7/7</span></div><div class="bar"><i style="width:100%"></i></div></section></div><div class="hint"><button id="pv" type="button" aria-label="上一張">←</button>左右滑，第 5 張按複製<button id="nx" type="button" aria-label="下一張">→</button></div><script>
+const tr=document.getElementById('tr'),w=()=>tr.querySelector('.sl').offsetWidth+14;
+document.getElementById('pv').onclick=()=>tr.scrollBy({left:-w(),behavior:'smooth'});
+document.getElementById('nx').onclick=()=>tr.scrollBy({left:w(),behavior:'smooth'});
+document.querySelectorAll('.cp').forEach(b=>b.onclick=async()=>{const p=document.getElementById('txt'),t=p.innerText,l=b.textContent;let ok=true;
+try{await navigator.clipboard.writeText(t)}catch(e){const r=document.createRange();r.selectNodeContents(p);const s=getSelection();s.removeAllRanges();s.addRange(r);try{ok=document.execCommand('copy')}catch(_){ok=false}}
+b.textContent=ok?'已複製 ✓':'已選取，按 ⌘C';b.classList.add('ok');setTimeout(()=>{b.textContent=l;b.classList.remove('ok')},2500)});
+</script></body></html>
